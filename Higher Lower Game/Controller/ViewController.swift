@@ -10,11 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     let allNumbers = NumberBank()
-    let randomIndex = Int.random(in: 0...11)
+    let randomIndex = Int.random(in: 0...9)
     var nextNumberOnScreen: ScreenNumber!
     var currentNumberOnScreen: ScreenNumber!
     var nextNumber = 0
-    var skipNumberOnScreen: ScreenNumber!
+    var skipNumberOnScreen = 0
+    var score = 0
     
     
     var numberOnLabel = 0
@@ -25,62 +26,78 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        scoreBoard()
         play()
+        
+        print("Next number is: \(nextNumberOnScreen.displayNumber)")
         
     }
 
     @IBAction func lowerButtonPressed(_ sender: UIButton) {
-        if nextNumberOnScreen.displayNumber < currentNumberOnScreen.displayNumber {
-            nextLabelNumber()
-        }
-        else if nextNumberOnScreen.displayNumber == currentNumberOnScreen.displayNumber{
-            nextLabelNumber()
-        }
-        else {
-            print("You loose, the next number was \(nextNumberOnScreen.displayNumber)")
-            play()
-            print("New Game, new number is \(currentNumberOnScreen.displayNumber)")
-        }
+        checkAnswerForLower()
     }
     
     @IBAction func higherButtonPressed(_ sender: UIButton) {
-        if nextNumberOnScreen.displayNumber > currentNumberOnScreen.displayNumber {
-            nextLabelNumber()
-        }
-        else if nextNumberOnScreen.displayNumber == currentNumberOnScreen.displayNumber{
-            nextLabelNumber()
-        }
-        else {
-            print("You loose, the next number was \(nextNumberOnScreen.displayNumber)")
-            play()
-            print("New Game, new number is \(currentNumberOnScreen.displayNumber)")
-        }
+        checkAnswerForHigher()
     }
     
     func play() {
-        currentNumberOnScreen = allNumbers.numberArray[randomIndex + 1]
+        currentNumberOnScreen = allNumbers.numberArray[randomIndex]
         screenLabel.text = "\((currentNumberOnScreen.displayNumber))"
-        nextNumberOnScreen = allNumbers.numberArray[Int.random(in: 0...10)]
+        nextNumberOnScreen = allNumbers.numberArray[Int.random(in: 0...9)]
     }
-    
-    
-    func updateUI() {
-    }
-
     
     func nextLabelNumber() {
         currentNumberOnScreen = nextNumberOnScreen
         screenLabel.text = "\((currentNumberOnScreen.displayNumber))"
-        nextNumberOnScreen = allNumbers.numberArray[Int.random(in: 0...10)]
+        nextNumberOnScreen = allNumbers.numberArray[Int.random(in: 0...9)]
     }
     
-    func skipNextNumber() {
+    func scoreBoard() {
+        
+        scoreLabel.text = "\(score)"
+        score = score + 1
+        
+        
     }
     
-    func checkAnswer() {
+    func skipNumber() {
+        skipNumberOnScreen = nextNumberOnScreen.displayNumber + nextNumberOnScreen.displayNumber
     }
     
+    func checkAnswerForLower() {
+        // FOR LOWER BUTTON
+        if nextNumberOnScreen.displayNumber < currentNumberOnScreen.displayNumber {
+            nextLabelNumber()
+            scoreBoard()
+            print("Next number is: \(nextNumberOnScreen.displayNumber)")
+        }
+        
+        else {
+            print("You loose, the next number was \(nextNumberOnScreen.displayNumber)")
+            play()
+            print("New Game, new number is \(currentNumberOnScreen.displayNumber)")
+            
+        }
+    }
+    
+    func checkAnswerForHigher() {
+        if nextNumberOnScreen.displayNumber > currentNumberOnScreen.displayNumber {
+            nextLabelNumber()
+            scoreBoard()
+            print("Next number is: \(nextNumberOnScreen.displayNumber)")
+        }
+        
+        else {
+            print("You loose, the next number was \(nextNumberOnScreen.displayNumber)")
+            play()
+            print("New Game, new number is \(currentNumberOnScreen.displayNumber)")
+            
+        }
+    }
+ 
     func startOver() {
+        
         nextLabelNumber()
     }
 }
