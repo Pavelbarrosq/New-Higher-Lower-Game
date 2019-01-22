@@ -9,27 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let allNumbers = NumberBank()
-    let randomIndex = Int.random(in: 0...9)
-    var nextNumberOnScreen: ScreenNumber!
-    var currentNumberOnScreen: ScreenNumber!
-    var nextNumber = 0
-    var skipNumberOnScreen = 0
     var score = 0
-    
-    
-    var numberOnLabel = 0
+    let cardConverter = CardConverter()
+    var randomIndex1 = Int.random(in: 2...14)
+    var randomIndex2 = Int.random(in: 2...14)
+    var currentCardOnScreen : String = ""
+    var nextCardOnScreen : String = ""
+    var numberInArray : Int = 0
+    var allCards = [Int]()
+//    let randomCardIndex = Int.random(in: 1...4)
+//    var card2 = ["2C", "2H", "2D", "2S"]
     
     @IBOutlet weak var screenLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var cardImageOnScreen: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        scoreBoard()
         play()
-        
-        print("Next number is: \(nextNumberOnScreen.displayNumber)")
         
     }
 
@@ -42,63 +40,76 @@ class ViewController: UIViewController {
     }
     
     func play() {
-        currentNumberOnScreen = allNumbers.numberArray[randomIndex]
-        screenLabel.text = "\((currentNumberOnScreen.displayNumber))"
-        nextNumberOnScreen = allNumbers.numberArray[Int.random(in: 0...9)]
+        print("\(nextCardOnScreen)")
+        currentCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
+        cardImageOnScreen.image = UIImage (named: currentCardOnScreen)
+        nextCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
+        nextCard()
     }
     
-    func nextLabelNumber() {
-        currentNumberOnScreen = nextNumberOnScreen
-        screenLabel.text = "\((currentNumberOnScreen.displayNumber))"
-        nextNumberOnScreen = allNumbers.numberArray[Int.random(in: 0...9)]
+    func nextCard() {
+        currentCardOnScreen = nextCardOnScreen
+        cardImageOnScreen.image = UIImage (named: nextCardOnScreen)
+        nextCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
+        print("next card is: \(nextCardOnScreen)")
     }
     
-    func scoreBoard() {
-        
-        scoreLabel.text = "\(score)"
+    func increaseScore() {
         score = score + 1
-        
-        
+        scoreLabel.text = "Score: \(score)"
     }
     
-    func skipNumber() {
-        skipNumberOnScreen = nextNumberOnScreen.displayNumber + nextNumberOnScreen.displayNumber
+    func resetScore() {
+        score = 0
+        scoreLabel.text = "Score: \(score)"
     }
+    
+    
     
     func checkAnswerForLower() {
         // FOR LOWER BUTTON
-        if nextNumberOnScreen.displayNumber < currentNumberOnScreen.displayNumber {
-            nextLabelNumber()
-            scoreBoard()
-            print("Next number is: \(nextNumberOnScreen.displayNumber)")
+        if nextCardOnScreen < currentCardOnScreen {
+            nextCard()
+            increaseScore()
+        }
+            
+            //        else if currentCardOnScreen == nextCardOnScreen {
+            //            currentCardOnScreen = cardConverter.convertCard(numberInArray: [randomIndex1])
+            //            screenLabel.image = UIImage (named: currentCardOnScreen)
+            //
+            //        }
+            
+        else {
+            resetScore()
+            nextCard()
         }
         
-        else {
-            print("You loose, the next number was \(nextNumberOnScreen.displayNumber)")
-            play()
-            print("New Game, new number is \(currentNumberOnScreen.displayNumber)")
-            
-        }
     }
     
     func checkAnswerForHigher() {
-        if nextNumberOnScreen.displayNumber > currentNumberOnScreen.displayNumber {
-            nextLabelNumber()
-            scoreBoard()
-            print("Next number is: \(nextNumberOnScreen.displayNumber)")
+        // FOR HIGHER BUTTON
+        if nextCardOnScreen > currentCardOnScreen {
+            nextCard()
+            increaseScore()
         }
-        
+            
+            //        else if currentCardOnScreen == nextCardOnScreen {
+            //            currentCardOnScreen = cardConverter.convertCard(numberInArray: [randomIndex1])
+            //            screenLabel.image = UIImage (named: currentCardOnScreen)
+            //
+            //        }
+            
         else {
-            print("You loose, the next number was \(nextNumberOnScreen.displayNumber)")
-            play()
-            print("New Game, new number is \(currentNumberOnScreen.displayNumber)")
+            
+            resetScore()
+            nextCard()
             
         }
     }
  
     func startOver() {
-        
-        nextLabelNumber()
+        resetScore()
+        play()
     }
 }
 

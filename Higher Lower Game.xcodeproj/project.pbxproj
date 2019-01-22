@@ -15,7 +15,7 @@
 		CD87642E21EE261D00AA998A /* Higher_Lower_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87642D21EE261D00AA998A /* Higher_Lower_GameTests.swift */; };
 		CD87643921EE261D00AA998A /* Higher_Lower_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87643821EE261D00AA998A /* Higher_Lower_GameUITests.swift */; };
 		CD87644C21EE2A7000AA998A /* ScreenNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87644B21EE2A7000AA998A /* ScreenNumber.swift */; };
-		CD87644E21EE2B2500AA998A /* NumberBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87644D21EE2B2500AA998A /* NumberBank.swift */; };
+		CDD4FE2B21F7842E0072095B /* CardConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4FE2A21F7842E0072095B /* CardConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		CD87643821EE261D00AA998A /* Higher_Lower_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Higher_Lower_GameUITests.swift; sourceTree = "<group>"; };
 		CD87643A21EE261D00AA998A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD87644B21EE2A7000AA998A /* ScreenNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNumber.swift; sourceTree = "<group>"; };
-		CD87644D21EE2B2500AA998A /* NumberBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBank.swift; sourceTree = "<group>"; };
+		CDD4FE2A21F7842E0072095B /* CardConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CD87644B21EE2A7000AA998A /* ScreenNumber.swift */,
-				CD87644D21EE2B2500AA998A /* NumberBank.swift */,
+				CDD4FE2A21F7842E0072095B /* CardConverter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD87644E21EE2B2500AA998A /* NumberBank.swift in Sources */,
+				CDD4FE2B21F7842E0072095B /* CardConverter.swift in Sources */,
 				CD87641B21EE261C00AA998A /* ViewController.swift in Sources */,
 				CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */,
 				CD87644C21EE2A7000AA998A /* ScreenNumber.swift in Sources */,
