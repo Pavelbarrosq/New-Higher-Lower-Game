@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     func play() {
-        print("\(nextCardOnScreen)")
+        print(currentCardOnScreen)
         currentCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
         cardImageOnScreen.image = UIImage (named: currentCardOnScreen)
         nextCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])

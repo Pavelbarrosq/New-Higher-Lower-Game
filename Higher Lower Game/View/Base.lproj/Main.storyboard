@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="cRv-d2-sgz">
             <objects>
-                <viewController id="Q0Y-uV-NVs" sceneMemberID="viewController">
+                <viewController id="Q0Y-uV-NVs" customClass="FirstViewController" customModule="Higher_Lower_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IjT-Ym-EmB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="a5l-lk-oEk" kind="show" id="mdg-xP-D5P"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fvc-W8-PKk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,46 +41,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgw-Y8-BiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-183.19999999999999" y="-210.59113300492612"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ux0-B4-XqX">
-            <objects>
-                <viewController id="a5l-lk-oEk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bTt-ft-X0c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oI-e1-9MY">
-                                <rect key="frame" x="20" y="662" width="335" height="59"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
-                                <state key="normal" title="Shuffle Cards">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="r1N-VU-YlR"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red_back" translatesAutoresizingMaskIntoConstraints="NO" id="8WO-7P-a8D">
-                                <rect key="frame" x="72" y="104" width="231" height="352"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="8WO-7P-a8D" firstAttribute="top" secondItem="2ca-Kg-uuu" secondAttribute="top" constant="60" id="3Jv-MR-7B2"/>
-                            <constraint firstItem="2ca-Kg-uuu" firstAttribute="trailing" secondItem="8WO-7P-a8D" secondAttribute="trailing" constant="72" id="8RM-um-Fom"/>
-                            <constraint firstItem="2ca-Kg-uuu" firstAttribute="bottom" secondItem="8WO-7P-a8D" secondAttribute="bottom" constant="322" id="KWF-xd-pxh"/>
-                            <constraint firstItem="2oI-e1-9MY" firstAttribute="top" secondItem="8WO-7P-a8D" secondAttribute="bottom" constant="206" id="Lae-8l-Mkb"/>
-                            <constraint firstItem="2oI-e1-9MY" firstAttribute="leading" secondItem="2ca-Kg-uuu" secondAttribute="leading" constant="20" id="b2a-2a-5PC"/>
-                            <constraint firstItem="8WO-7P-a8D" firstAttribute="leading" secondItem="2ca-Kg-uuu" secondAttribute="leading" constant="72" id="cj3-bW-hg9"/>
-                            <constraint firstItem="2ca-Kg-uuu" firstAttribute="bottom" secondItem="2oI-e1-9MY" secondAttribute="bottom" constant="57" id="g3w-zS-MlZ"/>
-                            <constraint firstItem="2ca-Kg-uuu" firstAttribute="trailing" secondItem="2oI-e1-9MY" secondAttribute="trailing" constant="20" id="goG-gP-1f4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="2ca-Kg-uuu"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nLx-Gx-eb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-183" y="463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -150,11 +110,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="130.78817733990149"/>
+            <point key="canvasLocation" x="714" y="-211"/>
         </scene>
     </scenes>
     <resources>
         <image name="2C" width="230.33332824707031" height="352"/>
-        <image name="Red_back" width="230.33332824707031" height="352"/>
     </resources>
 </document>

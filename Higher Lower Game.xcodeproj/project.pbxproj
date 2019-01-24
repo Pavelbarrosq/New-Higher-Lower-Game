@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7E785321F9C9B90005A685 /* FirstViewController.swift */; };
 		CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87641821EE261C00AA998A /* AppDelegate.swift */; };
 		CD87641B21EE261C00AA998A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87641A21EE261C00AA998A /* ViewController.swift */; };
 		CD87641E21EE261C00AA998A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD87641C21EE261C00AA998A /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		CD87642321EE261D00AA998A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD87642121EE261D00AA998A /* LaunchScreen.storyboard */; };
 		CD87642E21EE261D00AA998A /* Higher_Lower_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87642D21EE261D00AA998A /* Higher_Lower_GameTests.swift */; };
 		CD87643921EE261D00AA998A /* Higher_Lower_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87643821EE261D00AA998A /* Higher_Lower_GameUITests.swift */; };
-		CD87644C21EE2A7000AA998A /* ScreenNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87644B21EE2A7000AA998A /* ScreenNumber.swift */; };
 		CDD4FE2B21F7842E0072095B /* CardConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4FE2A21F7842E0072095B /* CardConverter.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD7E785321F9C9B90005A685 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CD87641521EE261C00AA998A /* Higher Lower Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Higher Lower Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD87641821EE261C00AA998A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD87641A21EE261C00AA998A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		CD87643421EE261D00AA998A /* Higher Lower GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Higher Lower GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD87643821EE261D00AA998A /* Higher_Lower_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Higher_Lower_GameUITests.swift; sourceTree = "<group>"; };
 		CD87643A21EE261D00AA998A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD87644B21EE2A7000AA998A /* ScreenNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNumber.swift; sourceTree = "<group>"; };
 		CDD4FE2A21F7842E0072095B /* CardConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +133,7 @@
 			children = (
 				CD87641821EE261C00AA998A /* AppDelegate.swift */,
 				CD87641A21EE261C00AA998A /* ViewController.swift */,
+				CD7E785321F9C9B90005A685 /* FirstViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,7 +150,6 @@
 		CD87644821EE295300AA998A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CD87644B21EE2A7000AA998A /* ScreenNumber.swift */,
 				CDD4FE2A21F7842E0072095B /* CardConverter.swift */,
 			);
 			path = Model;
@@ -289,7 +289,7 @@
 				CDD4FE2B21F7842E0072095B /* CardConverter.swift in Sources */,
 				CD87641B21EE261C00AA998A /* ViewController.swift in Sources */,
 				CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */,
-				CD87644C21EE2A7000AA998A /* ScreenNumber.swift in Sources */,
+				CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
