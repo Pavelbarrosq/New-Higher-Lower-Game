@@ -10,13 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     var score = 0
-    let cardConverter = CardConverter()
-    var randomIndex1 = Int.random(in: 2...14)
-    var randomIndex2 = Int.random(in: 2...14)
-    var currentCardOnScreen : String = ""
-    var nextCardOnScreen : String = ""
-    var numberInArray : Int = 0
-    var allCards = [Int]()
+    let cardDeck = CardDeck()
+    var currentCard : Card!
+    var nextCard: Card!
+    
+
 //    let randomCardIndex = Int.random(in: 1...4)
 //    var card2 = ["2C", "2H", "2D", "2S"]
     
@@ -26,9 +24,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
+        currentCard = cardDeck.getCard()
+        cardImageOnScreen.image = UIImage (named: currentCard.name)
         play()
         
+        
+    
     }
 
     @IBAction func lowerButtonPressed(_ sender: UIButton) {
@@ -40,18 +43,30 @@ class ViewController: UIViewController {
     }
     
     func play() {
-        print(currentCardOnScreen)
-        currentCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
-        cardImageOnScreen.image = UIImage (named: currentCardOnScreen)
-        nextCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
-        nextCard()
+        
+        currentCard = cardDeck.getCard()
+        cardImageOnScreen.image = UIImage (named: currentCard.name)
+        
+        nextCard = cardDeck.getCard()
+        
+//        print(currentCardOnScreen)
+//        currentCardOnScreen =
+//        cardImageOnScreen.image = UIImage (named: currentCardOnScreen)
+//        nextCardOnScreen =
+//        nextCard()
     }
     
-    func nextCard() {
-        currentCardOnScreen = nextCardOnScreen
-        cardImageOnScreen.image = UIImage (named: nextCardOnScreen)
-        nextCardOnScreen = cardConverter.convertCard(numberInArray: [Int.random(in: 2...14)])
-        print("next card is: \(nextCardOnScreen)")
+    func nextCardOnScreen() {
+        currentCard = nextCard
+        cardImageOnScreen.image = UIImage (named: nextCard.name)
+        nextCard = cardDeck.getCard()
+        print("Next Card is: \(nextCard.value)")
+        
+        
+//        currentCardOnScreen = nextCardOnScreen
+//        cardImageOnScreen.image = UIImage (named: nextCardOnScreen)
+//        nextCardOnScreen =
+//        print("next card is: \(nextCardOnScreen)")
     }
     
     func increaseScore() {
@@ -68,66 +83,35 @@ class ViewController: UIViewController {
     
     func checkAnswerForLower() {
         // FOR LOWER BUTTON
-        if nextCardOnScreen < currentCardOnScreen {
-            nextCard()
+       
+        if nextCard.value < currentCard.value {
             increaseScore()
+            nextCardOnScreen()
         }
-            
-            //        else if currentCardOnScreen == nextCardOnScreen {
-            //            currentCardOnScreen = cardConverter.convertCard(numberInArray: [randomIndex1])
-            //            screenLabel.image = UIImage (named: currentCardOnScreen)
-            //
-            //        }
-            
+
         else {
-            resetScore()
-            nextCard()
+            startOver()
         }
         
     }
     
     func checkAnswerForHigher() {
         // FOR HIGHER BUTTON
-        if nextCardOnScreen > currentCardOnScreen {
-            nextCard()
+        if nextCard.value > currentCard.value {
             increaseScore()
+            nextCardOnScreen()
         }
-            
-            //        else if currentCardOnScreen == nextCardOnScreen {
-            //            currentCardOnScreen = cardConverter.convertCard(numberInArray: [randomIndex1])
-            //            screenLabel.image = UIImage (named: currentCardOnScreen)
-            //
-            //        }
-            
-        else {
-            
-            resetScore()
-            nextCard()
-            
+
+        else{
+            startOver()
+
         }
     }
- 
+
     func startOver() {
         resetScore()
         play()
     }
 }
-
-//    func currentNumber() {
-//
-//        screenLabel.text = "\(currentNumberOnScreen)"
-//
-//        //screenLabel.text = "\(currentNumberOnScreen)"
-//
-//    }
-
-//        if numberOnLabel < nextNumberOnScreen{
-//
-//            print("Lower")
-//        }
-//        if numberOnLabel > nextNumberOnScreen {
-//
-//            print("Higher")
-//        }
 
 
