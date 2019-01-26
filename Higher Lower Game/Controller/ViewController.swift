@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     func play() {
         
+        
         currentCard = cardDeck.getCard()
         cardImageOnScreen.image = UIImage (named: currentCard.name)
         
@@ -57,11 +58,18 @@ class ViewController: UIViewController {
     }
     
     func nextCardOnScreen() {
+        if currentCard.value != nextCard.value {
         currentCard = nextCard
         cardImageOnScreen.image = UIImage (named: nextCard.name)
         nextCard = cardDeck.getCard()
         print("Next Card is: \(nextCard.value)")
+        }
         
+        if currentCard.value == nextCard.value {
+            currentCard = cardDeck.getCard()
+            nextCardOnScreen()
+            print("new next card is: \(nextCard.value)")
+        }
         
 //        currentCardOnScreen = nextCardOnScreen
 //        cardImageOnScreen.image = UIImage (named: nextCardOnScreen)

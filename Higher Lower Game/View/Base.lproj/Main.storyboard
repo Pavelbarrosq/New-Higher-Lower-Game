@@ -83,7 +83,7 @@
                                     <action selector="lowerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="met-7c-0Kn"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2C" translatesAutoresizingMaskIntoConstraints="NO" id="FGQ-GG-PVa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AS" translatesAutoresizingMaskIntoConstraints="NO" id="FGQ-GG-PVa">
                                 <rect key="frame" x="56" y="135" width="263" height="415"/>
                             </imageView>
                         </subviews>
@@ -114,6 +114,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2C" width="230.33332824707031" height="352"/>
+        <image name="AS" width="230.33332824707031" height="352"/>
     </resources>
 </document>
