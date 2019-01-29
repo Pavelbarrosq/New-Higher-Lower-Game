@@ -9,11 +9,20 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    
+    @IBOutlet weak var button: UIButton!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        label1.layer.cornerRadius = 5.0
+        button.layer.cornerRadius = 5.0
+        
     }
     
 

@@ -18,12 +18,20 @@ class ViewController: UIViewController {
 //    let randomCardIndex = Int.random(in: 1...4)
 //    var card2 = ["2C", "2H", "2D", "2S"]
     
+    @IBOutlet weak var timeRemaining: UILabel!
+    @IBOutlet weak var buttonHigh: UIButton!
+    @IBOutlet weak var buttonLow: UIButton!
     @IBOutlet weak var screenLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var cardImageOnScreen: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scoreLabel.layer.cornerRadius = 5.0
+        buttonLow.layer.cornerRadius = 5.0
+        buttonHigh.layer.cornerRadius = 5.0
+        timeRemaining.layer.cornerRadius = 25.0
         
         
         currentCard = cardDeck.getCard()
@@ -79,12 +87,12 @@ class ViewController: UIViewController {
     
     func increaseScore() {
         score = score + 1
-        scoreLabel.text = "Score: \(score)"
+        scoreLabel.text = "Score: \(score) "
     }
     
     func resetScore() {
         score = 0
-        scoreLabel.text = "Score: \(score)"
+        scoreLabel.text = "Score: \(score) "
     }
     
     
