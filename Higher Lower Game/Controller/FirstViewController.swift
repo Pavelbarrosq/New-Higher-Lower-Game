@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        label1.layer.cornerRadius = 5.0
+//        label1.layer.cornerRadius = 5.0
         button.layer.cornerRadius = 5.0
         
     }

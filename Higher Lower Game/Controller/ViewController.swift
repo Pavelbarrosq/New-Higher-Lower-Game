@@ -14,10 +14,14 @@ class ViewController: UIViewController {
     var currentCard : Card!
     var nextCard: Card!
     
+    var countdownTimer = 3
+    var startTimer = Timer()
+    
 
 //    let randomCardIndex = Int.random(in: 1...4)
 //    var card2 = ["2C", "2H", "2D", "2S"]
     
+    @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var timeRemaining: UILabel!
     @IBOutlet weak var buttonHigh: UIButton!
     @IBOutlet weak var buttonLow: UIButton!
@@ -31,14 +35,35 @@ class ViewController: UIViewController {
         scoreLabel.layer.cornerRadius = 5.0
         buttonLow.layer.cornerRadius = 5.0
         buttonHigh.layer.cornerRadius = 5.0
-        timeRemaining.layer.cornerRadius = 25.0
+//        timeRemaining.layer.cornerRadius = 25.0
         
+        countdownTimer = 3
+        countdownLabel.text = "\(countdownTimer)"
+        
+        buttonLow.isEnabled = false
+        buttonHigh.isEnabled = false
+        
+        startTimer =  Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.startGameTimer), userInfo: nil, repeats: true)
         
         currentCard = cardDeck.getCard()
         cardImageOnScreen.image = UIImage (named: currentCard.name)
         play()
         
         
+    
+    }
+    
+    @objc func startGameTimer() {
+        
+        countdownTimer -= 1
+        countdownLabel.text = "\(countdownTimer)"
+        
+        if countdownTimer == 0 {
+            startTimer.invalidate()
+            buttonLow.isEnabled = true
+            buttonHigh.isEnabled = true
+            countdownLabel.text = ""
+        }
     
     }
 
@@ -106,7 +131,7 @@ class ViewController: UIViewController {
         }
 
         else {
-            startOver()
+            nextCardOnScreen()
         }
         
     }
@@ -119,7 +144,7 @@ class ViewController: UIViewController {
         }
 
         else{
-            startOver()
+            nextCardOnScreen()
 
         }
     }
