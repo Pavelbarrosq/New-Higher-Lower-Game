@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     var countdownTimer = 3
     var startTimer = Timer()
     
+    var countdownGame = 60
+    var gameTimer = Timer()
+    
 
 //    let randomCardIndex = Int.random(in: 1...4)
 //    var card2 = ["2C", "2H", "2D", "2S"]
@@ -45,6 +48,9 @@ class ViewController: UIViewController {
         
         startTimer =  Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.startGameTimer), userInfo: nil, repeats: true)
         
+        countdownGame = 60
+        timeRemaining.text = "\(countdownGame)"
+        
         currentCard = cardDeck.getCard()
         cardImageOnScreen.image = UIImage (named: currentCard.name)
         play()
@@ -63,9 +69,37 @@ class ViewController: UIViewController {
             buttonLow.isEnabled = true
             buttonHigh.isEnabled = true
             countdownLabel.text = ""
+            
+            gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.game), userInfo: nil, repeats: true)
+            
         }
     
     }
+    
+    @objc func game() {
+        
+        countdownGame -= 1
+        timeRemaining.text = "\(countdownGame)"
+        
+        if countdownGame == 0 {
+            gameTimer.invalidate()
+            buttonHigh.isEnabled = false
+            buttonLow.isEnabled = false
+    
+            
+            Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.end), userInfo: nil, repeats: false)
+    
+        }
+    
+    }
+    
+    @objc func end() {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "endGame") as! EndViewController
+        self.present(vc, animated: false, completion: nil)
+        
+    }
+    
 
     @IBAction func lowerButtonPressed(_ sender: UIButton) {
         checkAnswerForLower()
@@ -132,6 +166,7 @@ class ViewController: UIViewController {
 
         else {
             nextCardOnScreen()
+            
         }
         
     }

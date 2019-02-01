@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD434CF1220447CC0003856D /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD434CF0220447CC0003856D /* EndViewController.swift */; };
 		CD4B5AD021FB34BA00821876 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4B5ACF21FB34BA00821876 /* Card.swift */; };
 		CD4B5AD221FB378E00821876 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4B5AD121FB378E00821876 /* CardDeck.swift */; };
 		CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7E785321F9C9B90005A685 /* FirstViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD434CF0220447CC0003856D /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		CD4B5ACF21FB34BA00821876 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CD4B5AD121FB378E00821876 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 		CD7E785321F9C9B90005A685 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				CD87641821EE261C00AA998A /* AppDelegate.swift */,
 				CD87641A21EE261C00AA998A /* ViewController.swift */,
 				CD7E785321F9C9B90005A685 /* FirstViewController.swift */,
+				CD434CF0220447CC0003856D /* EndViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD434CF1220447CC0003856D /* EndViewController.swift in Sources */,
 				CD87641B21EE261C00AA998A /* ViewController.swift in Sources */,
 				CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */,
 				CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */,
