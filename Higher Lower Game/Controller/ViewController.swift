@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     var countdownGame = 60
     var gameTimer = Timer()
     
+    var recordData : String!
+    
 
 //    let randomCardIndex = Int.random(in: 1...4)
 //    var card2 = ["2C", "2H", "2D", "2S"]
@@ -35,10 +37,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scoreLabel.layer.cornerRadius = 5.0
+        
         buttonLow.layer.cornerRadius = 5.0
         buttonHigh.layer.cornerRadius = 5.0
-//        timeRemaining.layer.cornerRadius = 25.0
+        timeRemaining.layer.cornerRadius = 25.0
         
         countdownTimer = 3
         countdownLabel.text = "\(countdownTimer)"
@@ -48,8 +50,12 @@ class ViewController: UIViewController {
         
         startTimer =  Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.startGameTimer), userInfo: nil, repeats: true)
         
-        countdownGame = 60
+        countdownGame = 10
         timeRemaining.text = "\(countdownGame)"
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        let value = userDefaults.string(forKey: "Record")
+        recordData = value
         
         currentCard = cardDeck.getCard()
         cardImageOnScreen.image = UIImage (named: currentCard.name)
@@ -76,6 +82,12 @@ class ViewController: UIViewController {
     
     }
     
+    func penalty() {
+        
+        
+        
+    }
+    
     @objc func game() {
         
         countdownGame -= 1
@@ -83,6 +95,30 @@ class ViewController: UIViewController {
         
         if countdownGame == 0 {
             gameTimer.invalidate()
+            
+            if recordData == nil {
+                
+                let savedString = "\(score)"
+                let userDefaults = Foundation.UserDefaults.standard
+                userDefaults.set(savedString, forKey: "Record")
+                
+            } else {
+                
+                let score: Int? = Int(scoreLabel.text!)
+                let record: Int? = Int(recordData)
+                
+                if score! > record! {
+                    
+                    let savedString = scoreLabel.text
+                    let userDefaults = Foundation.UserDefaults.standard
+                    userDefaults.set(savedString, forKey: "Record")
+                    
+                }
+                
+            }
+            
+        
+            
             buttonHigh.isEnabled = false
             buttonLow.isEnabled = false
     
@@ -96,6 +132,9 @@ class ViewController: UIViewController {
     @objc func end() {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "endGame") as! EndViewController
+        
+        vc.scoreData = scoreLabel.text
+        
         self.present(vc, animated: false, completion: nil)
         
     }
@@ -146,12 +185,13 @@ class ViewController: UIViewController {
     
     func increaseScore() {
         score = score + 1
-        scoreLabel.text = "Score: \(score) "
+        scoreLabel.text = String(score)
+        
     }
     
     func resetScore() {
         score = 0
-        scoreLabel.text = "Score: \(score) "
+        scoreLabel.text = String(score)
     }
     
     
@@ -166,6 +206,7 @@ class ViewController: UIViewController {
 
         else {
             nextCardOnScreen()
+            
             
         }
         

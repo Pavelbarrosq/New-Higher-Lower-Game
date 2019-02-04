@@ -23,6 +23,23 @@ class FirstViewController: UIViewController {
 //        label1.layer.cornerRadius = 5.0
         button.layer.cornerRadius = 5.0
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let userDefaults = Foundation.UserDefaults.standard
+        let value = userDefaults.string(forKey: "Record")
+        
+        if (value == nil) {
+            
+            label2.text = "0"
+            
+        } else {
+            
+            label2.text = value
+            
+        }
     }
     
 

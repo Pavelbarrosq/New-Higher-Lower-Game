@@ -13,6 +13,11 @@ class CardDeck {
     private var deck = [Card]()
     private var usedDeck = [Card]()
     
+    let cardAC = Card(col: "Black", val: 1, nam: "AC")
+    let cardAD = Card(col: "Red", val: 1, nam: "AD")
+    let cardAH = Card(col: "Red", val: 1, nam: "AH")
+    let cardAS = Card(col: "Black", val: 1, nam: "AS")
+    
     let card2C = Card(col: "Black", val: 2, nam: "2C")
     let card2D = Card(col: "Red", val: 2, nam: "2D")
     let card2H = Card(col: "Red", val: 2, nam: "2H")
@@ -72,11 +77,6 @@ class CardDeck {
     let cardKD = Card(col: "Red", val: 13, nam: "KD")
     let cardKH = Card(col: "Red", val: 13, nam: "KH")
     let cardKS = Card(col: "Black", val: 13, nam: "KS")
-    
-    let cardAC = Card(col: "Black", val: 14, nam: "AC")
-    let cardAD = Card(col: "Red", val: 14, nam: "AD")
-    let cardAH = Card(col: "Red", val: 14, nam: "AH")
-    let cardAS = Card(col: "Black", val: 14, nam: "AS")
     
     
     init()
