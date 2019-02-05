@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         startTimer =  Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.startGameTimer), userInfo: nil, repeats: true)
         
-        countdownGame = 10
+        countdownGame = 60
         timeRemaining.text = "\(countdownGame)"
         
         let userDefaults = Foundation.UserDefaults.standard
