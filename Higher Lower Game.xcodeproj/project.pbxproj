@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD299201220B6AAB0027EDA7 /* Backgounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD299200220B6AAB0027EDA7 /* Backgounds.swift */; };
+		CD299205220B730F0027EDA7 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD299204220B730F0027EDA7 /* HowToPlayViewController.swift */; };
 		CD434CF1220447CC0003856D /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD434CF0220447CC0003856D /* EndViewController.swift */; };
 		CD4B5AD021FB34BA00821876 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4B5ACF21FB34BA00821876 /* Card.swift */; };
 		CD4B5AD221FB378E00821876 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4B5AD121FB378E00821876 /* CardDeck.swift */; };
-		CD5A3014220B39BA008ADA39 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A3013220B39BA008ADA39 /* SettingsViewController.swift */; };
 		CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7E785321F9C9B90005A685 /* FirstViewController.swift */; };
 		CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87641821EE261C00AA998A /* AppDelegate.swift */; };
 		CD87641B21EE261C00AA998A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87641A21EE261C00AA998A /* ViewController.swift */; };
@@ -40,11 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD299200220B6AAB0027EDA7 /* Backgounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backgounds.swift; sourceTree = "<group>"; };
+		CD299204220B730F0027EDA7 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		CD434CF0220447CC0003856D /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		CD4B5ACF21FB34BA00821876 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CD4B5AD121FB378E00821876 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
-		CD5A3013220B39BA008ADA39 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CD7E785321F9C9B90005A685 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CD87641521EE261C00AA998A /* Higher Lower Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Higher Lower Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD87641821EE261C00AA998A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +141,7 @@
 				CD87641A21EE261C00AA998A /* ViewController.swift */,
 				CD7E785321F9C9B90005A685 /* FirstViewController.swift */,
 				CD434CF0220447CC0003856D /* EndViewController.swift */,
-				CD5A3013220B39BA008ADA39 /* SettingsViewController.swift */,
+				CD299204220B730F0027EDA7 /* HowToPlayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,7 +160,6 @@
 			children = (
 				CD4B5ACF21FB34BA00821876 /* Card.swift */,
 				CD4B5AD121FB378E00821876 /* CardDeck.swift */,
-				CD299200220B6AAB0027EDA7 /* Backgounds.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,10 +297,9 @@
 			files = (
 				CD434CF1220447CC0003856D /* EndViewController.swift in Sources */,
 				CD87641B21EE261C00AA998A /* ViewController.swift in Sources */,
-				CD5A3014220B39BA008ADA39 /* SettingsViewController.swift in Sources */,
 				CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */,
+				CD299205220B730F0027EDA7 /* HowToPlayViewController.swift in Sources */,
 				CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */,
-				CD299201220B6AAB0027EDA7 /* Backgounds.swift in Sources */,
 				CD4B5AD021FB34BA00821876 /* Card.swift in Sources */,
 				CD4B5AD221FB378E00821876 /* CardDeck.swift in Sources */,
 			);
