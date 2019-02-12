@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     var countdownGame = 60
     var gameTimer = Timer()
     
+    var penaltySeconds = 5
+    
     var recordData : String!
     
 
@@ -77,24 +79,18 @@ class ViewController: UIViewController {
             countdownLabel.text = ""
             
             gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.game), userInfo: nil, repeats: true)
-            
         }
-    
     }
     
-    func penalty() {
-        
-        
-        
-    }
     
     @objc func game() {
         
         countdownGame -= 1
         timeRemaining.text = "\(countdownGame)"
         
-        if countdownGame == 0 {
+        if countdownGame < 0 {
             gameTimer.invalidate()
+            timeRemaining.text = "0"
             
             if recordData == nil {
                 
@@ -108,33 +104,24 @@ class ViewController: UIViewController {
                 let record: Int? = Int(recordData)
                 
                 if score! > record! {
-                    
                     let savedString = scoreLabel.text
                     let userDefaults = Foundation.UserDefaults.standard
                     userDefaults.set(savedString, forKey: "Record")
-                    
                 }
-                
             }
-            
-        
             
             buttonHigh.isEnabled = false
             buttonLow.isEnabled = false
     
-            
             Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.end), userInfo: nil, repeats: false)
-    
+            
         }
-    
     }
     
     @objc func end() {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "endGame") as! EndViewController
-        
         vc.scoreData = scoreLabel.text
-        
         self.present(vc, animated: false, completion: nil)
         
     }
@@ -150,21 +137,16 @@ class ViewController: UIViewController {
     
     func play() {
         
-        
         currentCard = cardDeck.getCard()
         cardImageOnScreen.image = UIImage (named: currentCard.name)
         
         nextCard = cardDeck.getCard()
-        
-//        print(currentCardOnScreen)
-//        currentCardOnScreen =
-//        cardImageOnScreen.image = UIImage (named: currentCardOnScreen)
-//        nextCardOnScreen =
-//        nextCard()
     }
     
     func nextCardOnScreen() {
+        
         if currentCard.value != nextCard.value {
+            
         currentCard = nextCard
         cardImageOnScreen.image = UIImage (named: nextCard.name)
         nextCard = cardDeck.getCard()
@@ -172,21 +154,16 @@ class ViewController: UIViewController {
         }
         
         if currentCard.value == nextCard.value {
+            
             currentCard = cardDeck.getCard()
             nextCardOnScreen()
             print("new next card is: \(nextCard.value)")
         }
-        
-//        currentCardOnScreen = nextCardOnScreen
-//        cardImageOnScreen.image = UIImage (named: nextCardOnScreen)
-//        nextCardOnScreen =
-//        print("next card is: \(nextCardOnScreen)")
     }
     
     func increaseScore() {
         score = score + 1
         scoreLabel.text = String(score)
-        
     }
     
     func resetScore() {
@@ -203,13 +180,10 @@ class ViewController: UIViewController {
             increaseScore()
             nextCardOnScreen()
         }
-
         else {
+            countdownGame -= 5
             nextCardOnScreen()
-            
-            
         }
-        
     }
     
     func checkAnswerForHigher() {
@@ -220,8 +194,8 @@ class ViewController: UIViewController {
         }
 
         else{
+            countdownGame -= 5
             nextCardOnScreen()
-
         }
     }
 

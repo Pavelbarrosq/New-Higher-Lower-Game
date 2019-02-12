@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  Higher Lower Game
+
+  Created by Pavel Barros Quintanilla on 2019-02-11.
+  Copyright © 2019 Pavel Barros Quintanilla. All rights reserved.
+*/
+"textFieldKey" = "Setup: A deck of 52 cards is used for the game (no jokers). The deck is shuffled, and one card are placed on the display. A timer starts counting down from three, you cannot press Higher or Lower button before the timer hits zero. When timer hits zero a game timer starts counting down from one minute. Gameplay Card value starts with aces considered the lowest (value of 1) and kings being considered the highest (value of 13). The player take turns guessing whether the next card on the deck will be of lower or higher value than the previous card before. If a guess is incorrect, player will loose five seconds from the game timer. One correct answer rewards with one point, gather as many point possible. the highest score will be displayed under HighScore on the first screen in the game. Good luck!";

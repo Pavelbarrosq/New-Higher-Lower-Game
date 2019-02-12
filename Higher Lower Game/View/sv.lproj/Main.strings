@@ -1,0 +1,43 @@
+
+/* Class = "UIButton"; normalTitle = "Go Back"; ObjectID = "2Qk-B4-7bv"; */
+"2Qk-B4-7bv.normalTitle" = "Tillbaka";
+
+/* Class = "UIButton"; normalTitle = "How to play"; ObjectID = "3Xw-ca-fb0"; */
+"3Xw-ca-fb0.normalTitle" = "Hur man spelar";
+
+/* Class = "UILabel"; text = "60"; ObjectID = "8aj-eo-hRE"; */
+"8aj-eo-hRE.text" = "60";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "AAs-DQ-9Hq"; */
+"AAs-DQ-9Hq.text" = "0";
+
+/* Class = "UILabel"; text = "Your Score"; ObjectID = "Aqg-n2-73k"; */
+"Aqg-n2-73k.text" = "Din poäng";
+
+/* Class = "UIButton"; normalTitle = "Higher"; ObjectID = "BWg-mZ-hK3"; */
+"BWg-mZ-hK3.normalTitle" = "Högre";
+
+/* Class = "UIButton"; normalTitle = "Lower"; ObjectID = "KYS-FG-Yf0"; */
+"KYS-FG-Yf0.normalTitle" = "Lägre";
+
+/* Class = "UIButton"; normalTitle = "Restart"; ObjectID = "OsF-e4-pdT"; */
+"OsF-e4-pdT.normalTitle" = "Starta om";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Tbi-Rv-fgO"; */
+"Tbi-Rv-fgO.text" = "0";
+
+/* Class = "UILabel"; text = "HighScore"; ObjectID = "Yf8-68-Q22"; */
+"Yf8-68-Q22.text" = "Rekord";
+
+/* Class = "UIButton"; normalTitle = "Start Game"; ObjectID = "dvj-CG-443"; */
+"dvj-CG-443.normalTitle" = "Starta";
+
+/* Class = "UILabel"; text = "Score:"; ObjectID = "eNc-lQ-arC"; */
+"eNc-lQ-arC.text" = "Poäng:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "m6k-tP-zMG"; */
+"m6k-tP-zMG.text" = "0";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "nKH-dP-qbH"; */
+"nKH-dP-qbH.text" = "3";
+
