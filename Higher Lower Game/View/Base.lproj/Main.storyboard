@@ -91,6 +91,27 @@ Gameplay
             </objects>
             <point key="canvasLocation" x="-183.19999999999999" y="465.51724137931035"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="3FF-Oz-lwi">
+            <objects>
+                <viewController id="p97-J0-faB" customClass="TestViewController" customModule="Higher_Lower_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idv-Dw-nuf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AS" translatesAutoresizingMaskIntoConstraints="NO" id="ze8-Zr-dY1">
+                                <rect key="frame" x="34" y="166" width="306" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bMn-3O-aSK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5i-7p-3c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="466"/>
+        </scene>
         <!--First View Controller-->
         <scene sceneID="cRv-d2-sgz">
             <objects>
@@ -169,6 +190,7 @@ Gameplay
                     </view>
                     <connections>
                         <outlet property="button" destination="dvj-CG-443" id="36t-Zq-gYn"/>
+                        <outlet property="howToPlayButton" destination="3Xw-ca-fb0" id="p35-PQ-js5"/>
                         <outlet property="label1" destination="Yf8-68-Q22" id="mcG-dR-SJ1"/>
                         <outlet property="label2" destination="m6k-tP-zMG" id="ohV-sh-59a"/>
                     </connections>
@@ -269,6 +291,18 @@ Gameplay
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AS" translatesAutoresizingMaskIntoConstraints="NO" id="FGQ-GG-PVa">
                                 <rect key="frame" x="34" y="102" width="306" height="481"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q5-uC-D4S">
+                                <rect key="frame" x="0.0" y="591" width="375" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="cOI-OZ-hbl"/>
+                                    <constraint firstAttribute="height" constant="91" id="gAm-MV-ZYk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="101"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="shadowColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -280,6 +314,7 @@ Gameplay
                             <constraint firstItem="Tbi-Rv-fgO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C1I-Uz-R4y"/>
                             <constraint firstItem="nKH-dP-qbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DQo-RW-z5W"/>
                             <constraint firstItem="BWg-mZ-hK3" firstAttribute="leading" secondItem="KYS-FG-Yf0" secondAttribute="trailing" constant="11" id="DeI-M9-stK"/>
+                            <constraint firstItem="2q5-uC-D4S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dw4-Ix-Jvf"/>
                             <constraint firstItem="Tbi-Rv-fgO" firstAttribute="leading" secondItem="eNc-lQ-arC" secondAttribute="trailing" id="F4E-nJ-SYo"/>
                             <constraint firstItem="FGQ-GG-PVa" firstAttribute="top" secondItem="Tbi-Rv-fgO" secondAttribute="bottom" constant="8" id="FNr-pa-YAq"/>
                             <constraint firstItem="BWg-mZ-hK3" firstAttribute="leading" secondItem="KYS-FG-Yf0" secondAttribute="trailing" constant="11" id="IDJ-MS-gi2"/>
@@ -288,6 +323,7 @@ Gameplay
                             <constraint firstItem="BWg-mZ-hK3" firstAttribute="top" secondItem="nKH-dP-qbH" secondAttribute="bottom" constant="8" id="Mhg-od-voe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWg-mZ-hK3" secondAttribute="trailing" constant="16" id="Rsv-xJ-cAF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FGQ-GG-PVa" secondAttribute="trailing" constant="35" id="Uc4-kD-KBZ"/>
+                            <constraint firstItem="BWg-mZ-hK3" firstAttribute="top" secondItem="2q5-uC-D4S" secondAttribute="bottom" constant="8" id="UlQ-Ek-iru"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8aj-eo-hRE" secondAttribute="trailing" constant="16" id="Z8P-Zr-XNv"/>
                             <constraint firstItem="Tbi-Rv-fgO" firstAttribute="leading" secondItem="eNc-lQ-arC" secondAttribute="trailing" id="Zoo-fT-mCW"/>
                             <constraint firstItem="QDq-3V-6AQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zsf-cD-SPx"/>
@@ -296,6 +332,8 @@ Gameplay
                             <constraint firstItem="nKH-dP-qbH" firstAttribute="top" secondItem="FGQ-GG-PVa" secondAttribute="bottom" constant="8" id="c2S-DD-Wam"/>
                             <constraint firstItem="BWg-mZ-hK3" firstAttribute="height" secondItem="KYS-FG-Yf0" secondAttribute="height" id="cuV-EY-mVi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KYS-FG-Yf0" secondAttribute="bottom" constant="21" id="eua-9g-GJi"/>
+                            <constraint firstItem="2q5-uC-D4S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="huN-YI-eZF"/>
+                            <constraint firstItem="2q5-uC-D4S" firstAttribute="top" secondItem="FGQ-GG-PVa" secondAttribute="bottom" constant="8" id="jDo-za-Hh9"/>
                             <constraint firstItem="QDq-3V-6AQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jmc-TE-ygv"/>
                             <constraint firstItem="FGQ-GG-PVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="pgv-0d-w35"/>
                             <constraint firstItem="BWg-mZ-hK3" firstAttribute="width" secondItem="KYS-FG-Yf0" secondAttribute="width" id="zTH-B5-wjE"/>
@@ -308,6 +346,7 @@ Gameplay
                         <outlet property="buttonLow" destination="KYS-FG-Yf0" id="pdU-MN-nuI"/>
                         <outlet property="cardImageOnScreen" destination="FGQ-GG-PVa" id="1tA-Nd-nec"/>
                         <outlet property="countdownLabel" destination="nKH-dP-qbH" id="VPs-us-r9Y"/>
+                        <outlet property="endGameLabel" destination="2q5-uC-D4S" id="E9d-nm-eQU"/>
                         <outlet property="scoreLabel" destination="Tbi-Rv-fgO" id="WCD-AA-5EU"/>
                         <outlet property="timeRemaining" destination="8aj-eo-hRE" id="GsK-1D-Q1i"/>
                     </connections>

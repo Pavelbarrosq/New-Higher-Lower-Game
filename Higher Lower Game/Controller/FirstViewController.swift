@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var label2: UILabel!
     
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var howToPlayButton: UIButton!
     
     
     
@@ -22,6 +23,8 @@ class FirstViewController: UIViewController {
 
 //        label1.layer.cornerRadius = 5.0
         button.layer.cornerRadius = 5.0
+        howToPlayButton.layer.cornerRadius = 5.0
+        
         
         
         

@@ -19,6 +19,7 @@
 		CD87642321EE261D00AA998A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD87642121EE261D00AA998A /* LaunchScreen.storyboard */; };
 		CD87642E21EE261D00AA998A /* Higher_Lower_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87642D21EE261D00AA998A /* Higher_Lower_GameTests.swift */; };
 		CD87643921EE261D00AA998A /* Higher_Lower_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87643821EE261D00AA998A /* Higher_Lower_GameUITests.swift */; };
+		CD90298422130BD400D955B1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90298322130BD400D955B1 /* TestViewController.swift */; };
 		CDEF85282211B5D800F7B15B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDEF852A2211B5D800F7B15B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		CD87643421EE261D00AA998A /* Higher Lower GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Higher Lower GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD87643821EE261D00AA998A /* Higher_Lower_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Higher_Lower_GameUITests.swift; sourceTree = "<group>"; };
 		CD87643A21EE261D00AA998A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD90298322130BD400D955B1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CDEF85242211AE1000F7B15B /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
 		CDEF85252211AE1000F7B15B /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CDEF85292211B5D800F7B15B /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				CD7E785321F9C9B90005A685 /* FirstViewController.swift */,
 				CD434CF0220447CC0003856D /* EndViewController.swift */,
 				CD299204220B730F0027EDA7 /* HowToPlayViewController.swift */,
+				CD90298322130BD400D955B1 /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				CD434CF1220447CC0003856D /* EndViewController.swift in Sources */,
 				CD87641B21EE261C00AA998A /* ViewController.swift in Sources */,
+				CD90298422130BD400D955B1 /* TestViewController.swift in Sources */,
 				CD87641921EE261C00AA998A /* AppDelegate.swift in Sources */,
 				CD299205220B730F0027EDA7 /* HowToPlayViewController.swift in Sources */,
 				CD7E785421F9C9B90005A685 /* FirstViewController.swift in Sources */,

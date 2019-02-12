@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var currentCard : Card!
     var nextCard: Card!
     
+    let generator = UISelectionFeedbackGenerator()
+    
     var countdownTimer = 3
     var startTimer = Timer()
     
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var screenLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var cardImageOnScreen: UIImageView!
+    @IBOutlet weak var endGameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +94,8 @@ class ViewController: UIViewController {
         if countdownGame < 0 {
             gameTimer.invalidate()
             timeRemaining.text = "0"
+            endGameLabel.text = "GAME"
+            
             
             if recordData == nil {
                 
@@ -178,9 +183,11 @@ class ViewController: UIViewController {
        
         if nextCard.value < currentCard.value {
             increaseScore()
+            generator.selectionChanged()
             nextCardOnScreen()
         }
         else {
+            
             countdownGame -= 5
             nextCardOnScreen()
         }
@@ -190,10 +197,12 @@ class ViewController: UIViewController {
         // FOR HIGHER BUTTON
         if nextCard.value > currentCard.value {
             increaseScore()
+            generator.selectionChanged()
             nextCardOnScreen()
         }
 
         else{
+            
             countdownGame -= 5
             nextCardOnScreen()
         }
