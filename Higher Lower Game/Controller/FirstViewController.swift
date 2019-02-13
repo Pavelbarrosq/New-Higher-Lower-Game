@@ -21,6 +21,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.tag = 1
 //        label1.layer.cornerRadius = 5.0
         button.layer.cornerRadius = 5.0
         howToPlayButton.layer.cornerRadius = 5.0
