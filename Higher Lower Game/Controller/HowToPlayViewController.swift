@@ -11,13 +11,19 @@ import UIKit
 class HowToPlayViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var howToPlay: UITextView!
+    @IBOutlet weak var howToPlay2: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.howToPlay.text = NSLocalizedString("textFieldKey", comment: " ")
         
+        self.howToPlay2.text = NSLocalizedString("textFieldKey2", comment: " ")
+        
+        
         button1.layer.cornerRadius = 5.0
+        
+    
         
         
         
