@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     
     var recordData : String!
     
-
-//    let randomCardIndex = Int.random(in: 1...4)
-//    var card2 = ["2C", "2H", "2D", "2S"]
+    
+    //    let randomCardIndex = Int.random(in: 1...4)
+    //    var card2 = ["2C", "2H", "2D", "2S"]
     
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var timeRemaining: UILabel!
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         play()
         
         
-    
+        
     }
     
     @objc func startGameTimer() {
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
             
             buttonHigh.isEnabled = false
             buttonLow.isEnabled = false
-    
+            
             Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.end), userInfo: nil, repeats: false)
             
         }
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
         
     }
     
-
+    
     @IBAction func lowerButtonPressed(_ sender: UIButton) {
         checkAnswerForLower()
     }
@@ -152,10 +152,10 @@ class ViewController: UIViewController {
         
         if currentCard.value != nextCard.value {
             
-        currentCard = nextCard
-        cardImageOnScreen.image = UIImage (named: nextCard.name)
-        nextCard = cardDeck.getCard()
-        print("Next Card is: \(nextCard.value)")
+            currentCard = nextCard
+            cardImageOnScreen.image = UIImage (named: nextCard.name)
+            nextCard = cardDeck.getCard()
+            print("Next Card is: \(nextCard.value)")
         }
         
         if currentCard.value == nextCard.value {
@@ -180,7 +180,7 @@ class ViewController: UIViewController {
     
     func checkAnswerForLower() {
         // FOR LOWER BUTTON
-       
+        
         if nextCard.value < currentCard.value {
             increaseScore()
             generator.selectionChanged()
@@ -200,14 +200,14 @@ class ViewController: UIViewController {
             generator.selectionChanged()
             nextCardOnScreen()
         }
-
+            
         else{
             
             countdownGame -= 5
             nextCardOnScreen()
         }
     }
-
+    
     func startOver() {
         resetScore()
         play()

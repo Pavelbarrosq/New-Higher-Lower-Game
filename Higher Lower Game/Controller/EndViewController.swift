@@ -9,16 +9,16 @@
 import UIKit
 
 class EndViewController: UIViewController {
-
+    
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
     var scoreData: String!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         button4.layer.cornerRadius = 5.0
         
         scoreLabel.text = scoreData
@@ -32,5 +32,5 @@ class EndViewController: UIViewController {
         
     }
     
-
+    
 }

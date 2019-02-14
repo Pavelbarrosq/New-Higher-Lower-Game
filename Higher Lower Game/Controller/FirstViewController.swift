@@ -17,12 +17,12 @@ class FirstViewController: UIViewController {
     
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.tag = 1
-//        label1.layer.cornerRadius = 5.0
+        //        label1.layer.cornerRadius = 5.0
         button.layer.cornerRadius = 5.0
         howToPlayButton.layer.cornerRadius = 5.0
         
@@ -46,15 +46,15 @@ class FirstViewController: UIViewController {
         }
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
