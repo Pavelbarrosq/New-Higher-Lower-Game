@@ -17,8 +17,9 @@ class HowToPlayViewController: UIViewController {
         super.viewDidLoad()
         
         self.howToPlay.text = NSLocalizedString("textFieldKey", comment: " ")
-        
+        howToPlay.isEditable = false
         self.howToPlay2.text = NSLocalizedString("textFieldKey2", comment: " ")
+        howToPlay2.isEditable = false
         
         
         button1.layer.cornerRadius = 5.0
